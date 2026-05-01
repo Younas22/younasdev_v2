@@ -214,53 +214,12 @@
 
             </div>
 
-            <!-- Product Card -->
+            <!-- Product Image -->
             <div class="flex-shrink-0 w-full lg:w-96">
-                <div class="rounded-2xl p-6 space-y-5 glow-green"
-                     style="background:#0a0a0a;border:1px solid rgba(177,231,142,0.22);">
-
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-xl flex items-center justify-center"
-                             style="background:rgba(177,231,142,0.12);">
-                            <i class="fas fa-location-dot text-2xl" style="color:#B1E78E;"></i>
-                        </div>
-                        <div>
-                            <div class="text-white font-bold text-lg">CustomerNearMe</div>
-                            <div class="text-xs text-gray-500">From Problem → Solution</div>
-                        </div>
-                    </div>
-
-                    <div class="space-y-3">
-
-                        <div class="rounded-xl p-3 flex items-center gap-3"
-                             style="background:rgba(177,231,142,0.06);border:1px solid rgba(177,231,142,0.1);">
-                            <i class="fas fa-brain" style="color:#B1E78E;"></i>
-                            <span class="text-sm text-gray-300">Built from real freelancer struggle</span>
-                        </div>
-
-                        <div class="rounded-xl p-3 flex items-center gap-3"
-                             style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);">
-                            <i class="fas fa-globe" style="color:#B1E78E;"></i>
-                            <span class="text-sm text-gray-300">Connects you with real businesses</span>
-                        </div>
-
-                        <div class="rounded-xl p-3 flex items-center gap-3"
-                             style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);">
-                            <i class="fas fa-bolt" style="color:#B1E78E;"></i>
-                            <span class="text-sm text-gray-300">Turns effort into predictable clients</span>
-                        </div>
-
-                    </div>
-
-                    <div class="border-t border-gray-800 pt-4 flex items-center justify-between text-xs text-gray-500">
-                        <span>Built by Younas Dev</span>
-                        <span class="font-bold px-2 py-0.5 rounded-full"
-                              style="background:rgba(177,231,142,0.1);color:#B1E78E;">
-                            Live SaaS
-                        </span>
-                    </div>
-
-                </div>
+                <img src="{{ pub_asset('public/assets/images/personal/customernearme.jpg') }}"
+                     alt="CustomerNearMe — SaaS by Younas Dev"
+                     class="rounded-2xl w-full object-cover"
+                     style="border:1px solid rgba(177,231,142,0.22);" />
             </div>
 
         </div>
@@ -327,58 +286,75 @@
                     <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color:#B1E78E;"></i> Focused on psychology, not spam or automation</div>
                 </div>
 
-                <a href="https://younasphere34.gumroad.com/l/8-ClientsBlueprint" target="_blank"
-                   class="btn-brand inline-flex" style="padding:13px 26px;font-size:.95rem;">
-                    <i class="fas fa-bolt"></i> Get My Exact Client System
-                </a>
+                <!-- Price + Countdown -->
+                <div class="rounded-xl p-4 space-y-3" style="background:#0a0a0a;border:1px solid rgba(177,231,142,0.2);">
 
-            </div>
-
-            <!-- Product Card -->
-            <div class="flex-shrink-0 w-full lg:w-80">
-                <div class="rounded-2xl p-6 space-y-4"
-                     style="background:#0a0a0a;border:1px solid rgba(177,231,142,0.18);">
-
+                    <!-- Price Row -->
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-xl flex items-center justify-center"
-                             style="background:rgba(177,231,142,0.12);">
-                            <i class="fas fa-book-open text-2xl" style="color:#B1E78E;"></i>
-                        </div>
-                        <div>
-                            <div class="text-white font-bold">8 Clients Blueprint</div>
-                            <div class="text-xs text-gray-500">From Struggle → System</div>
-                        </div>
-                    </div>
-
-                    <div class="space-y-2">
-
-                        <div class="flex items-center gap-2 text-sm text-gray-400">
-                            <i class="fas fa-fire text-xs" style="color:#B1E78E;"></i> Built after real freelancing failure
-                        </div>
-
-                        <div class="flex items-center gap-2 text-sm text-gray-400">
-                            <i class="fas fa-envelope text-xs" style="color:#B1E78E;"></i> Copy-paste outreach templates
-                        </div>
-
-                        <div class="flex items-center gap-2 text-sm text-gray-400">
-                            <i class="fas fa-brain text-xs" style="color:#B1E78E;"></i> Psychology-based client approach
-                        </div>
-
-                        <div class="flex items-center gap-2 text-sm text-gray-400">
-                            <i class="fas fa-users text-xs" style="color:#B1E78E;"></i> Used by 300+ freelancers globally
-                        </div>
-
-                    </div>
-
-                    <div class="border-t border-gray-800 pt-3 flex items-center justify-between">
-                        <span class="text-xs text-gray-500">Available on Gumroad</span>
-                        <span class="text-xs font-bold px-2 py-0.5 rounded-full"
-                              style="background:rgba(177,231,142,0.1);color:#B1E78E;">
-                            SYSTEM
+                        <span class="text-gray-500 line-through text-sm">$29.00</span>
+                        <span class="font-black text-3xl" style="color:#B1E78E;">$7.99</span>
+                        <span class="text-xs font-bold px-2 py-0.5 rounded-full" style="background:rgba(239,68,68,0.15);color:#f87171;border:1px solid rgba(239,68,68,0.3);">
+                            73% OFF
                         </span>
                     </div>
 
+                    <!-- Today Only Label -->
+                    <div class="flex items-center gap-2 text-xs text-gray-400">
+                        <i class="fas fa-fire text-xs" style="color:#f87171;"></i>
+                        <span>Today only deal — offer expires in:</span>
+                    </div>
+
+                    <!-- Countdown Timer -->
+                    <div class="flex gap-2" id="blueprint-countdown">
+                        <div class="text-center">
+                            <div class="font-black text-white text-xl leading-none" id="bp-hours">00</div>
+                            <div class="text-gray-600 text-xs mt-0.5">HRS</div>
+                        </div>
+                        <div class="font-black text-gray-600 text-xl self-start mt-0.5">:</div>
+                        <div class="text-center">
+                            <div class="font-black text-white text-xl leading-none" id="bp-mins">00</div>
+                            <div class="text-gray-600 text-xs mt-0.5">MIN</div>
+                        </div>
+                        <div class="font-black text-gray-600 text-xl self-start mt-0.5">:</div>
+                        <div class="text-center">
+                            <div class="font-black text-xl leading-none" id="bp-secs" style="color:#B1E78E;">00</div>
+                            <div class="text-gray-600 text-xs mt-0.5">SEC</div>
+                        </div>
+                    </div>
+
                 </div>
+
+                <a href="https://younasphere34.gumroad.com/l/8-ClientsBlueprint" target="_blank"
+                   class="btn-brand inline-flex" style="padding:13px 26px;font-size:.95rem;">
+                    <i class="fas fa-bolt"></i> Get My Exact Client System — $7.99
+                </a>
+
+                <script>
+                (function () {
+                    function updateCountdown() {
+                        var now = new Date();
+                        var midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+                        var diff = Math.max(0, Math.floor((midnight - now) / 1000));
+                        var h = Math.floor(diff / 3600);
+                        var m = Math.floor((diff % 3600) / 60);
+                        var s = diff % 60;
+                        document.getElementById('bp-hours').textContent = String(h).padStart(2, '0');
+                        document.getElementById('bp-mins').textContent  = String(m).padStart(2, '0');
+                        document.getElementById('bp-secs').textContent  = String(s).padStart(2, '0');
+                    }
+                    updateCountdown();
+                    setInterval(updateCountdown, 1000);
+                })();
+                </script>
+
+            </div>
+
+            <!-- Product Image -->
+            <div class="flex-shrink-0 w-full lg:w-80">
+                <img src="{{ pub_asset('public/assets/images/personal/8clientsblueprint.jpg') }}"
+                     alt="8 Clients Blueprint — by Younas Dev"
+                     class="rounded-2xl w-full object-cover"
+                     style="border:1px solid rgba(177,231,142,0.18);" />
             </div>
 
         </div>

@@ -302,7 +302,7 @@ public function home()
 
 public function projectdetail($slug)
 {
-    $projects = json_decode(file_get_contents('project.json'), true);
+    $projects = json_decode(file_get_contents(base_path('project.json')), true);
     $slug = $slug ?? '';
     $searchTitle = ucwords(str_replace('-', ' ', $slug));
     $project = null;
@@ -666,7 +666,7 @@ public function sitemap()
 
 public function sitemapxml()
 {
-    $projects = json_decode(file_get_contents('project.json'), true);
+    $projects = json_decode(file_get_contents(base_path('project.json')), true);
     $posts = BlogPost::where('status', 'published')->latest()->get();
     $content = view('pages.sitemapxml', compact('posts','projects'));
     return Response::make($content, 200)->header('Content-Type', 'application/xml');

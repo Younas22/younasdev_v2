@@ -12,7 +12,7 @@
             <!-- Projects Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <?php
-                $projects = json_decode(file_get_contents('project.json'), true);
+                $projects = json_decode(file_get_contents(base_path('project.json')), true);
                 foreach ($projects as $project):
                 ?>
                 <a href="<?= url('project/' . urlencode(strtolower(str_replace(' ', '-', $project['title'])))); ?>"

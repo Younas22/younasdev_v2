@@ -290,7 +290,7 @@
                 </a>
                 <a href="https://younasphere34.gumroad.com/l/8-ClientsBlueprint" target="_blank"
                    class="text-xs font-medium px-3 py-1.5 rounded-full border border-gray-700 text-gray-400 hover:text-white hover:border-gray-500 transition-colors">
-                    <i class="fas fa-book-open mr-1"></i> Free eBook
+                    <i class="fas fa-book-open mr-1"></i> 8 Clients Blueprint
                 </a>
                 <a href="{{ url('projects') }}"
                    class="text-xs font-medium px-3 py-1.5 rounded-full border border-gray-700 text-gray-400 hover:text-white hover:border-gray-500 transition-colors">

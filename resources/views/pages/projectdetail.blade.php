@@ -1,4 +1,4 @@
-@extends('common.layout')
+﻿@extends('common.layout')
 @section('content')
 
 <style>
@@ -130,7 +130,7 @@
             <div class="chapter-sep mb-10"></div>
             <span class="chapter-label">Project Screenshot</span>
             <div class="pd-card" style="padding:20px;">
-                <img src="{{ asset('public/assets/images/project/' . $project['image']) }}"
+                <img src="{{ pub_asset('public/assets/images/project/' . $project['image']) }}"
                      alt="<?= htmlspecialchars($project['title']) ?>"
                      class="rounded-xl w-full">
                 <p class="text-center mt-3" style="font-size:.8rem;color:#4b5563;">
@@ -150,3 +150,4 @@
 </section>
 
 @endsection
+

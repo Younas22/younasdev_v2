@@ -1,4 +1,4 @@
-@extends('common.layout')
+﻿@extends('common.layout')
 @section('content')
 
     <div id="pageContent">
@@ -77,7 +77,7 @@
                          onclick="window.location.href='{{ route('blog.details', $featuredPost->slug) }}'">
                         <div class="md:flex">
                             <div class="md:w-1/2">
-                                <img src="{{ asset('public/' . $featuredPost->featured_image) }}"
+                                <img src="{{ pub_asset('public/' . $featuredPost->featured_image) }}"
                                      alt="{{ $featuredPost->title }}"
                                      class="w-full h-52 md:h-full object-cover">
                             </div>
@@ -94,7 +94,7 @@
                                 <p class="text-gray-400 text-sm mb-4">{{ $featuredPost->excerpt }}</p>
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2">
-                                        <img src="{{ asset('public/assets/'.$featuredPost->author->profile_image) }}"
+                                        <img src="{{ pub_asset('public/assets/'.$featuredPost->author->profile_image) }}"
                                              alt="{{ $featuredPost->author->first_name.' '.$featuredPost->author->last_name }}"
                                              class="w-7 h-7 rounded-full border border-white">
                                         <div>
@@ -296,3 +296,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 @endsection
+

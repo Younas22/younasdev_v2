@@ -1,7 +1,7 @@
-@foreach($blogs as $blog)
+﻿@foreach($blogs as $blog)
 <article class="rounded-xl overflow-hidden card-hover cursor-pointer" style="background:#0d0d0d;border:1px solid #222222;"
          onclick="window.location.href='{{ route('blog.details', $blog->slug) }}'">
-    <img src="{{ asset('public/' . $blog->featured_image) }}"
+    <img src="{{ pub_asset('public/' . $blog->featured_image) }}"
          alt="{{ $blog->title }}"
          class="w-full h-36 object-cover"
          loading="lazy">
@@ -16,7 +16,7 @@
         <p class="text-gray-400 text-sm mb-3 line-clamp-2">{{ $blog->excerpt }}</p>
         <div class="flex items-center justify-between text-xs">
             <div class="flex items-center gap-2">
-                <img src="{{ asset('public/assets/'.$blog->author->profile_image) }}"
+                <img src="{{ pub_asset('public/assets/'.$blog->author->profile_image) }}"
                      alt="{{ $blog->author->first_name.' '.$blog->author->last_name }}"
                      class="w-5 h-5 rounded-full">
                 <div>
@@ -33,3 +33,4 @@
     </div>
 </article>
 @endforeach
+

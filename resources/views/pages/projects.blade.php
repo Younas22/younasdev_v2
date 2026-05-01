@@ -1,4 +1,4 @@
-@extends('common.layout')
+﻿@extends('common.layout')
 @section('content')
 
     <!-- All Projects Page -->
@@ -17,7 +17,7 @@
                 ?>
                 <a href="<?= url('project/' . urlencode(strtolower(str_replace(' ', '-', $project['title'])))); ?>"
                    class="rounded-xl overflow-hidden card-hover" style="background:#0d0d0d;border:1px solid #222222;">
-                    <div class="h-36 bg-cover bg-center" style="background-image: url('{{ asset('public/assets/images/project/' . $project['image']) }}');"></div>
+                    <div class="h-36 bg-cover bg-center" style="background-image: url('{{ pub_asset('public/assets/images/project/' . $project['image']) }}');"></div>
                     <div class="p-4">
                         <h3 class="text-base font-bold mb-1 text-white"><?= urlencode($project['title']) ?></h3>
                         <p class="text-gray-400 text-sm mb-3"><?= $project['short_detail'] ?></p>
@@ -34,3 +34,4 @@
     </section>
 
 @endsection
+

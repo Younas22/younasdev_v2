@@ -1,4 +1,4 @@
-@extends('common.layout')
+﻿@extends('common.layout')
 @section('content')
 
   <!-- ░░░ 1. HERO ░░░ -->
@@ -128,7 +128,7 @@
                 <!-- ── RIGHT: 3 cols — Image ── -->
                 <div class="lg:col-span-4 flex items-start justify-center lg:justify-end" style="margin-top:-80px;">
                     <div style="position:relative;width:100%;max-width:420px;">
-                        <img src="{{ asset('public/assets/images/personal/hero.png') }}"
+                        <img src="{{ pub_asset('public/assets/images/personal/hero.png') }}"
                              alt="Younas Dev — PHP Laravel & Travel Tech Developer"
                              style="width:100%;max-height:calc(100vh);object-fit:contain;object-position:top center;display:block;" />
                         <div style="position:absolute;bottom:0;left:0;right:0;height:180px;
@@ -243,7 +243,7 @@
                 ?>
                 <a href="<?= url('project/' . urlencode(strtolower(str_replace(' ', '-', $project['title'])))); ?>"
                    class="rounded-xl overflow-hidden card-hover" style="background:#0d0d0d;border:1px solid #222222;">
-                    <div class="h-36 bg-cover bg-center" style="background-image: url('{{ asset('public/assets/images/project/' . $project['image']) }}');"></div>
+                    <div class="h-36 bg-cover bg-center" style="background-image: url('{{ pub_asset('public/assets/images/project/' . $project['image']) }}');"></div>
                     <div class="p-4">
                         <h3 class="text-base font-bold mb-1 text-white"><?= urlencode($project['title']) ?></h3>
                         <p class="text-gray-400 text-sm mb-3"><?= $project['short_detail'] ?></p>
@@ -305,3 +305,4 @@
     </section>
 
 @endsection
+

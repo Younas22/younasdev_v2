@@ -1,4 +1,4 @@
-@extends('common.layout')
+﻿@extends('common.layout')
 @section('content')
 
 <style>
@@ -124,7 +124,7 @@
             <!-- Author + Views -->
             <div class="flex items-center justify-between border-t pt-6" style="border-color:#141414;">
                 <div class="flex items-center gap-3">
-                    <img src="{{ asset('public/assets/'.$post->author->profile_image) }}"
+                    <img src="{{ pub_asset('public/assets/'.$post->author->profile_image) }}"
                          alt="{{ $post->author->first_name.' '.$post->author->last_name }}"
                          class="rounded-full object-cover"
                          style="width:44px;height:44px;border:2px solid rgba(177,231,142,0.3);">
@@ -148,7 +148,7 @@
     <section style="padding:40px 0;background:#000;">
         <div class="max-w-4xl mx-auto px-6">
             <div class="rounded-2xl overflow-hidden" style="border:1px solid #1a1a1a;background:#0a0a0a;">
-                <img src="{{ asset('public/' . $post->featured_image) }}"
+                <img src="{{ pub_asset('public/' . $post->featured_image) }}"
                      alt="{{ $post->title }}"
                      class="w-full"
                      style="max-height:420px;object-fit:contain;display:block;">
@@ -191,7 +191,7 @@
                 @endif">
                 @foreach($relatedPosts as $related)
                 <article class="related-card" onclick="window.location.href='{{ route('blog.details', $related->slug) }}'">
-                    <img src="{{ asset('public/' . $related->featured_image) }}"
+                    <img src="{{ pub_asset('public/' . $related->featured_image) }}"
                          alt="{{ $related->title }}"
                          class="w-full object-cover" style="height:180px;">
                     <div class="p-6">
@@ -206,7 +206,7 @@
                         </p>
                         <div class="flex items-center justify-between mt-4">
                             <div class="flex items-center gap-2" style="font-size:.78rem;color:#6b7280;">
-                                <img src="{{ asset('public/assets/'.$related->author->profile_image) }}"
+                                <img src="{{ pub_asset('public/assets/'.$related->author->profile_image) }}"
                                      alt="{{ $related->author->first_name }}"
                                      class="rounded-full object-cover" style="width:20px;height:20px;">
                                 <span>{{ $related->author->first_name.' '.$related->author->last_name }}</span>
@@ -335,3 +335,4 @@
 </div>
 
 @endsection
+

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
@@ -448,7 +448,7 @@
             <!-- Brand Section -->
             <div class="brand-logo">
 <div class="brand-icon">
-    <img src="{{ asset('public/assets/images/profile-pic.png') }}" alt="Profile Pic" style="height: 40px; width: 40px; object-fit: cover;">
+    <img src="{{ pub_asset('public/assets/images/profile-pic.png') }}" alt="Profile Pic" style="height: 40px; width: 40px; object-fit: cover;">
 </div>
 
                 <h1 class="brand-title">YounasDev</h1>

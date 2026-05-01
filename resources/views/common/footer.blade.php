@@ -1,4 +1,4 @@
-
+﻿
     <!-- FOOTER -->
     <footer class="bg-black border-t section-line">
         <div class="max-w-6xl mx-auto px-6 py-10">
@@ -6,7 +6,7 @@
 
                 <div>
                     <div class="flex items-center gap-3 mb-3">
-                        <img src="{{ asset('public/assets/images/personal/logo.png') }}"
+                        <img src="{{ pub_asset('public/assets/images/personal/logo.png') }}"
                              alt="Younas Dev" class="h-9 w-9 rounded-lg object-cover" />
                         <div>
                             <div class="font-bold text-white">Younas Dev</div>
@@ -100,3 +100,4 @@
     </script>
 </body>
 </html>
+

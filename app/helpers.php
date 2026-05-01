@@ -1,6 +1,13 @@
 <?php
 use App\Models\MenuItem;
 
+if (!function_exists('pub_asset')) {
+    function pub_asset($path) {
+        $prefix = env('ASSET_PREFIX');
+        return $prefix ? asset($prefix . '/' . $path) : asset($path);
+    }
+}
+
 if (!function_exists('getInitials')) {
     function getInitials(string $name): string
     {

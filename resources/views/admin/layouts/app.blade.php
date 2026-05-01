@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
     <!-- In your head section -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link href="{{ asset('public/assets/css/admin.css') }}" rel="stylesheet">
+    <link href="{{ pub_asset('public/assets/css/admin.css') }}" rel="stylesheet">
     @stack('styles')
 </head>
 <body>

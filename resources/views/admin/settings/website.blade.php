@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+﻿@extends('admin.layouts.app')
 
 @section('title', 'Website Settings')
 
@@ -364,7 +364,7 @@
                                 <label class="form-label">Business Logo</label>
                                 @if(!empty($settings['branding']['business_logo']))
                                     <div class="current-image">
-                                        <img src="{{ asset('public/storage/' . $settings['branding']['business_logo']) }}" alt="Current Logo" class="image-preview" style="max-height: 60px;">
+                                        <img src="{{ pub_asset('public/storage/' . $settings['branding']['business_logo']) }}" alt="Current Logo" class="image-preview" style="max-height: 60px;">
                                         <div class="mt-2 small text-muted">Current Logo</div>
                                     </div>
                                 @endif
@@ -382,7 +382,7 @@
                                 <label class="form-label">Favicon</label>
                                 @if(!empty($settings['branding']['favicon']))
                                     <div class="current-image">
-                                        <img src="{{ asset('public/storage/' . $settings['branding']['favicon']) }}" alt="Current Favicon" style="width: 32px; height: 32px;">
+                                        <img src="{{ pub_asset('public/storage/' . $settings['branding']['favicon']) }}" alt="Current Favicon" style="width: 32px; height: 32px;">
                                         <div class="mt-2 small text-muted">Current Favicon (32x32)</div>
                                     </div>
                                 @endif
@@ -418,7 +418,7 @@
                                 <label class="form-label">Homepage Cover Image</label>
                                 @if(!empty($settings['homepage']['cover_image']))
                                     <div class="current-image">
-                                        <img src="{{ asset('public/storage/' . $settings['homepage']['cover_image']) }}" alt="Current Cover" class="image-preview" style="max-width: 300px; max-height: 150px;">
+                                        <img src="{{ pub_asset('public/storage/' . $settings['homepage']['cover_image']) }}" alt="Current Cover" class="image-preview" style="max-width: 300px; max-height: 150px;">
                                         <div class="mt-2 small text-muted">Current Cover Image</div>
                                     </div>
                                 @endif
@@ -658,4 +658,5 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 @endsection
+
 

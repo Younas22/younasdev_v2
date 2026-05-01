@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,8 +13,8 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <link rel="canonical" href="{{ url()->current() }}">
 
-    <link rel="icon" type="image/jpeg" href="{{ asset('public/assets/images/personal/logo.png') }}">
-    <link rel="apple-touch-icon" href="{{ asset('public/assets/images/personal/logo.png') }}">
+    <link rel="icon" type="image/jpeg" href="{{ pub_asset('public/assets/images/personal/logo.png') }}">
+    <link rel="apple-touch-icon" href="{{ pub_asset('public/assets/images/personal/logo.png') }}">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -119,3 +119,4 @@
 
 
     @include("common.navbar")
+

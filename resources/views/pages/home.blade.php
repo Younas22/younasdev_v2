@@ -2,7 +2,6 @@
 @section('content')
 
 
-
     <!-- ░░░ 1. HERO ░░░ -->
     <section id="home" class="bg-black" style="min-height:100vh;padding-top:80px;">
         <div class="max-w-6xl mx-auto px-6">
@@ -80,10 +79,10 @@
 
                     <!-- CTAs -->
                     <div class="flex flex-wrap gap-3">
-                        <a href="https://wa.me/923460820722" target="_blank" class="btn-brand" style="padding:13px 24px;font-size:.93rem;min-width:170px;justify-content:center;">
+                        <a href="https://wa.me/923460820722" target="_blank" class="btn-brand" style="padding:13px 24px;font-size:.93rem;justify-content:center;flex:1;min-width:140px;">
                             <i class="fab fa-whatsapp text-lg"></i> Hire Me
                         </a>
-                        <a href="https://calendly.com/younasdev/strategy-call" target="_blank" class="btn-outline" style="padding:11px 22px;font-size:.93rem;min-width:170px;justify-content:center;">
+                        <a href="https://calendly.com/younasdev/strategy-call" target="_blank" class="btn-outline" style="padding:11px 22px;font-size:.93rem;justify-content:center;flex:1;min-width:140px;">
                             <i class="fas fa-calendar-check"></i> Book a Free Call
                         </a>
                     </div>
@@ -145,69 +144,85 @@
 
  
 <!-- ░░░ 4. CUSTOMERNEARME STORY ░░░ -->
-<section class="py-16 border-t section-line" style="background:#060606;">
+<section id="story" class="py-16 border-t section-line" style="background:#B1E78E;">
     <div class="max-w-6xl mx-auto px-6">
+
+        <!-- SECTION HEADLINE -->
+        <div class="text-center mb-12">
+            <p style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:#1a1a1a;margin-bottom:14px;opacity:.6;">SaaS Tool · Lead Generation</p>
+            <h2 style="font-size:clamp(1.75rem,6vw,4.8rem);font-weight:900;color:#0d0d0d;line-height:1.0;letter-spacing:-0.03em;">
+                Stop Hunting Clients.<br>Let the System Find Them.
+            </h2>
+            <p style="color:#1c1c1c;font-size:1.05rem;margin-top:16px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.5;">
+                Turn Google Maps into your personal client pipeline — real businesses, real leads, no platform fees.
+            </p>
+        </div>
+
         <div class="flex flex-col lg:flex-row items-center gap-12">
 
             <div class="flex-1 space-y-5">
 
-                <div class="proof-badge w-fit">
-                    <span class="w-2 h-2 rounded-full pulse-dot" style="background:#B1E78E;"></span>
+                <div class="proof-badge w-fit" style="background:rgba(0,0,0,0.1);border-color:rgba(0,0,0,0.2);color:#0d0d0d;">
+                    <span class="w-2 h-2 rounded-full" style="background:#0d0d0d;flex-shrink:0;display:inline-block;border-radius:50%;"></span>
                     My Journey · Why I Built This
                 </div>
 
-                <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">
+                <h2 class="text-3xl md:text-4xl font-black leading-tight" style="color:#0d0d0d;">
                     I Was Tired of Chasing Clients.<br>
-                    <span style="color:#B1E78E;">So I Built a System Instead.</span>
+                    So I Built a System Instead.
                 </h2>
 
-                <p class="text-gray-400 leading-relaxed" style="font-size:.95rem;">
-                    When I started freelancing, the hardest part wasn’t coding — it was finding clients.
+                <p class="leading-relaxed" style="font-size:.95rem;color:#1c1c1c;">
+                    When I started freelancing, the hardest part wasn't coding — it was finding clients.
                     Cold emails, random DMs, and freelance marketplaces were unpredictable and exhausting.
                 </p>
 
-                <p class="text-gray-400 leading-relaxed" style="font-size:.95rem;">
+                <p class="leading-relaxed" style="font-size:.95rem;color:#1c1c1c;">
                     Every day I saw thousands of real businesses on Google Maps actively running — gyms, restaurants, agencies — all of them needing websites, SEO, and automation.
                     But there was no simple way to connect freelancers with these businesses.
                 </p>
 
-                <p class="text-gray-400 leading-relaxed" style="font-size:.95rem;">
-                    That’s when I started building <span style="color:#B1E78E;font-weight:600;">CustomerNearMe</span>.
+                <p class="leading-relaxed" style="font-size:.95rem;color:#1c1c1c;">
+                    That's when I started building <span style="color:#0d0d0d;font-weight:700;">CustomerNearMe</span>.
                     Not as a tool… but as a system to remove uncertainty from client hunting.
                 </p>
 
-                <div class="grid grid-cols-3 gap-3">
+                <div class="grid grid-cols-3 gap-2 sm:gap-3">
 
-                    <div class="text-center rounded-xl p-4 border border-gray-800" style="background:#0a0a0a;">
-                        <div class="text-2xl font-black" style="color:#B1E78E;">350+</div>
-                        <div class="text-xs text-gray-500 mt-1">Freelancers Using It</div>
+                    <div class="text-center rounded-xl p-4" style="background:rgba(0,0,0,0.1);border:1px solid rgba(0,0,0,0.15);">
+                        <div class="text-2xl font-black" style="color:#0d0d0d;">350+</div>
+                        <div class="text-xs mt-1" style="color:#1c1c1c;">Freelancers Using It</div>
                     </div>
 
-                    <div class="text-center rounded-xl p-4 border border-gray-800" style="background:#0a0a0a;">
-                        <div class="text-2xl font-black text-white">10K+</div>
-                        <div class="text-xs text-gray-500 mt-1">Real Leads Found</div>
+                    <div class="text-center rounded-xl p-4" style="background:rgba(0,0,0,0.1);border:1px solid rgba(0,0,0,0.15);">
+                        <div class="text-2xl font-black" style="color:#0d0d0d;">10K+</div>
+                        <div class="text-xs mt-1" style="color:#1c1c1c;">Real Leads Found</div>
                     </div>
 
-                    <div class="text-center rounded-xl p-4 border border-gray-800" style="background:#0a0a0a;">
-                        <div class="text-2xl font-black" style="color:#B1E78E;">Live</div>
-                        <div class="text-xs text-gray-500 mt-1">Evolving System</div>
+                    <div class="text-center rounded-xl p-4" style="background:rgba(0,0,0,0.1);border:1px solid rgba(0,0,0,0.15);">
+                        <div class="text-2xl font-black" style="color:#0d0d0d;">Live</div>
+                        <div class="text-xs mt-1" style="color:#1c1c1c;">Evolving System</div>
                     </div>
 
                 </div>
 
-                <div class="space-y-2 text-sm text-gray-400">
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color:#B1E78E;"></i> Built from my own struggle as a freelancer</div>
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color:#B1E78E;"></i> Replaces guesswork with real business data</div>
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color:#B1E78E;"></i> Helps you find clients who actually need you</div>
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color:#B1E78E;"></i> Designed for speed, simplicity, and results</div>
+                <div class="space-y-2 text-sm" style="color:#1c1c1c;">
+                    <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color:#0d0d0d;"></i> Built from my own struggle as a freelancer</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color:#0d0d0d;"></i> Replaces guesswork with real business data</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color:#0d0d0d;"></i> Helps you find clients who actually need you</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color:#0d0d0d;"></i> Designed for speed, simplicity, and results</div>
                 </div>
 
                 <div class="flex flex-wrap gap-3">
-                    <a href="https://customernearme.com/" target="_blank" class="btn-brand" style="padding:12px 24px;font-size:.95rem;">
+                    <a href="https://customernearme.com/" target="_blank"
+                       style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;font-size:.95rem;background:#0d0d0d;color:#B1E78E;font-weight:700;border-radius:10px;text-decoration:none;transition:opacity .2s;"
+                       onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
                         <i class="fas fa-rocket"></i> Try the System I Built
                     </a>
 
-                    <a href="https://wa.me/923460820722?text=Tell%20me%20your%20story%20behind%20CustomerNearMe" target="_blank" class="btn-ghost" style="padding:11px 22px;font-size:.92rem;">
+                    <a href="https://wa.me/923460820722?text=Tell%20me%20your%20story%20behind%20CustomerNearMe" target="_blank"
+                       style="display:inline-flex;align-items:center;gap:8px;padding:11px 22px;font-size:.92rem;background:transparent;color:#0d0d0d;font-weight:700;border-radius:10px;border:2px solid #0d0d0d;text-decoration:none;transition:opacity .2s;"
+                       onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">
                         <i class="fab fa-whatsapp"></i> Ask Me Why I Built It
                     </a>
                 </div>
@@ -219,188 +234,428 @@
                 <img src="{{ pub_asset('public/assets/images/personal/customernearme.jpg') }}"
                      alt="CustomerNearMe — SaaS by Younas Dev"
                      class="rounded-2xl w-full object-cover"
-                     style="border:1px solid rgba(177,231,142,0.22);" />
+                     style="border:2px solid rgba(0,0,0,0.2);" />
             </div>
 
         </div>
     </div>
 </section>
 
-<!-- ░░░ 5. 8 CLIENTs BLUEPRINT (STORY VERSION) ░░░ -->
-<section class="py-16 bg-black border-t section-line">
+<!-- ░░░ 5. 8 CLIENTS BLUEPRINT — PREMIUM ░░░ -->
+<section id="blueprint" class="blueprint-section">
     <div class="max-w-6xl mx-auto px-6">
-        <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
 
-            <div class="flex-1 space-y-5">
+        <!-- SECTION HEADLINE -->
+        <div class="text-center mb-10">
+            <p style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:#6b7280;margin-bottom:14px;">Direct Client Hunting · Blueprint</p>
+            <h2 style="font-size:clamp(1.75rem,6vw,4.8rem);font-weight:900;color:#fff;line-height:1.0;letter-spacing:-0.03em;">
+                8 Clients in 30 Days.<br><span style="color:#B1E78E;">One System. Zero Platforms.</span>
+            </h2>
+            <p style="color:#9ca3af;font-size:1.05rem;margin-top:16px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.5;">
+                A proven step-by-step guide to land consistent clients through direct outreach — no Fiverr, no Upwork, no cold spam.
+            </p>
+        </div>
 
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold"
-                     style="background:rgba(177,231,142,0.1);color:#B1E78E;border:1px solid rgba(177,231,142,0.25);">
-                    <i class="fas fa-book text-xs" style="color:#B1E78E;"></i> My Personal System · Built From Failure
+        <!-- COUNTDOWN — above hero -->
+        <div class="bp-pricing-top" style="flex-direction:column;align-items:center;gap:8px;margin-bottom:24px;">
+            <div class="bp-timer-label">
+                <i class="fas fa-fire" style="color:#f87171;"></i>
+                Today only deal — offer expires in:
+            </div>
+            <div class="bp-countdown">
+                <div class="bp-countdown-unit">
+                    <div class="bp-countdown-num" id="bp-hours2">06</div>
+                    <div class="bp-countdown-label">HRS</div>
                 </div>
-
-                <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">
-                    I Was Struggling to Get Clients…<br>
-                    <span style="color:#B1E78E;">Until I Built This System</span>
-                </h2>
-
-                <p class="text-gray-400 leading-relaxed" style="font-size:.95rem;">
-                    When I lost my job in 2022, I thought freelancing would be easy.
-                    I joined Fiverr, Upwork, sent proposals… but nothing worked consistently.
-                </p>
-
-                <p class="text-gray-400 leading-relaxed" style="font-size:.95rem;">
-                    The problem was simple — I didn’t have a system.
-                    So I spent months testing, failing, and analyzing what actually makes clients respond.
-                    That’s how I discovered a repeatable method to land clients without guessing.
-                </p>
-
-                <p class="text-gray-400 leading-relaxed" style="font-size:.95rem;">
-                    I turned that experience into something simple — the
-                    <span style="color:#B1E78E;font-weight:600;">8 Clients Blueprint</span>.
-                    A practical system anyone can follow, even with zero experience.
-                </p>
-
-                <div class="grid grid-cols-3 gap-3">
-
-                    <div class="text-center rounded-xl p-4 border border-gray-800" style="background:#0a0a0a;">
-                        <div class="text-2xl font-black text-white">300+</div>
-                        <div class="text-xs text-gray-500 mt-1">Freelancers Using It</div>
-                    </div>
-
-                    <div class="text-center rounded-xl p-4 border border-gray-800" style="background:#0a0a0a;">
-                        <div class="text-2xl font-black text-white">50+</div>
-                        <div class="text-xs text-gray-500 mt-1">Real Reviews</div>
-                    </div>
-
-                    <div class="text-center rounded-xl p-4 border border-gray-800" style="background:#0a0a0a;">
-                        <div class="text-2xl font-black" style="color:#B1E78E;">5.0</div>
-                        <div class="text-xs text-gray-500 mt-1">Rating</div>
-                    </div>
-
+                <div class="bp-countdown-sep">:</div>
+                <div class="bp-countdown-unit">
+                    <div class="bp-countdown-num" id="bp-mins2">44</div>
+                    <div class="bp-countdown-label">MIN</div>
                 </div>
-
-                <div class="space-y-2 text-sm text-gray-400">
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color:#B1E78E;"></i> Built from real freelancing experience (not theory)</div>
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color:#B1E78E;"></i> Works for Fiverr, Upwork & direct clients</div>
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color:#B1E78E;"></i> Simple system anyone can understand & apply</div>
-                    <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color:#B1E78E;"></i> Focused on psychology, not spam or automation</div>
+                <div class="bp-countdown-sep">:</div>
+                <div class="bp-countdown-unit">
+                    <div class="bp-countdown-num bp-countdown-num--green" id="bp-secs2">10</div>
+                    <div class="bp-countdown-label">SEC</div>
                 </div>
+            </div>
+        </div>
 
-                <!-- Price + Countdown -->
-                <div class="rounded-xl p-4 space-y-3" style="background:#0a0a0a;border:1px solid rgba(177,231,142,0.2);">
+        <!-- TOP STORY — CENTERED -->
+        <div class="blueprint-hero">
+            <div class="proof-badge mx-auto mb-6" style="width:fit-content;">
+                <span class="w-2 h-2 rounded-full pulse-dot" style="background:#B1E78E;"></span>
+                My Personal System · Built From Failure
+            </div>
+            <h2 class="blueprint-title">
+                I Was <span class="bp-highlight">Struggling</span> to Get <span class="bp-highlight">Clients</span>…<br>
+                Until I Built This <span class="bp-highlight">System</span>
+            </h2>
+            <p class="blueprint-subtitle">
+                When I lost my job in 2022, I thought freelancing would be easy. I joined Fiverr, Upwork, sent proposals… but nothing worked. The problem was simple — no <span class="bp-highlight">system</span>. After months of testing and <span class="bp-highlight">failure</span>, I discovered a repeatable method. I packaged it into a simple guide anyone can follow.
+            </p>
+        </div>
 
-                    <!-- Price Row -->
-                    <div class="flex items-center gap-3">
-                        <span class="text-gray-500 line-through text-sm">$29.00</span>
-                        <span class="font-black text-3xl" style="color:#B1E78E;">$7.99</span>
-                        <span class="text-xs font-bold px-2 py-0.5 rounded-full" style="background:rgba(239,68,68,0.15);color:#f87171;border:1px solid rgba(239,68,68,0.3);">
-                            73% OFF
-                        </span>
-                    </div>
+        <!-- STATS ROW -->
+        <div class="bp-stats-row">
+            <div class="bp-stat-card">
+                <div class="bp-stat-number">300+</div>
+                <div class="bp-stat-label">Freelancers Using It</div>
+            </div>
+            <div class="bp-stat-card">
+                <div class="bp-stat-number">50+</div>
+                <div class="bp-stat-label">Real Reviews</div>
+            </div>
+            <div class="bp-stat-card bp-stat-card--accent">
+                <div class="bp-stat-number bp-stat-number--green">5.0</div>
+                <div class="bp-stat-label">Average Rating</div>
+            </div>
+        </div>
 
-                    <!-- Today Only Label -->
-                    <div class="flex items-center gap-2 text-xs text-gray-400">
-                        <i class="fas fa-fire text-xs" style="color:#f87171;"></i>
-                        <span>Today only deal — offer expires in:</span>
-                    </div>
+        <!-- FORMULA INFOGRAPHIC — DASHBOARD WIDGET -->
+        <div class="bpf-wrapper">
 
-                    <!-- Countdown Timer -->
-                    <div class="flex gap-2" id="blueprint-countdown">
-                        <div class="text-center">
-                            <div class="font-black text-white text-xl leading-none" id="bp-hours">00</div>
-                            <div class="text-gray-600 text-xs mt-0.5">HRS</div>
-                        </div>
-                        <div class="font-black text-gray-600 text-xl self-start mt-0.5">:</div>
-                        <div class="text-center">
-                            <div class="font-black text-white text-xl leading-none" id="bp-mins">00</div>
-                            <div class="text-gray-600 text-xs mt-0.5">MIN</div>
-                        </div>
-                        <div class="font-black text-gray-600 text-xl self-start mt-0.5">:</div>
-                        <div class="text-center">
-                            <div class="font-black text-xl leading-none" id="bp-secs" style="color:#B1E78E;">00</div>
-                            <div class="text-gray-600 text-xs mt-0.5">SEC</div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <a href="https://younasphere34.gumroad.com/l/8-ClientsBlueprint" target="_blank"
-                   class="btn-brand inline-flex" style="padding:13px 26px;font-size:.95rem;">
-                    <i class="fas fa-bolt"></i> Get My Exact Client System — $7.99
-                </a>
-
-                <script>
-                (function () {
-                    function updateCountdown() {
-                        var now = new Date();
-                        var midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
-                        var diff = Math.max(0, Math.floor((midnight - now) / 1000));
-                        var h = Math.floor(diff / 3600);
-                        var m = Math.floor((diff % 3600) / 60);
-                        var s = diff % 60;
-                        document.getElementById('bp-hours').textContent = String(h).padStart(2, '0');
-                        document.getElementById('bp-mins').textContent  = String(m).padStart(2, '0');
-                        document.getElementById('bp-secs').textContent  = String(s).padStart(2, '0');
-                    }
-                    updateCountdown();
-                    setInterval(updateCountdown, 1000);
-                })();
-                </script>
-
+            <!-- SECTION 1: HEADER -->
+            <div class="bpf-header">
+                <h3 class="bpf-main-title">8 Clients in a Month</h3>
+                <p class="bpf-sub-title">The Math Behind the System</p>
             </div>
 
-            <!-- Product Image -->
-            <div class="flex-shrink-0 w-full lg:w-80">
-                <img src="{{ pub_asset('public/assets/images/personal/8clientsblueprint.jpg') }}"
-                     alt="8 Clients Blueprint — by Younas Dev"
-                     class="rounded-2xl w-full object-cover"
-                     style="border:1px solid rgba(177,231,142,0.18);" />
+            <!-- SECTION 2: FORMULA FLOW -->
+            <div class="bpf-formula">
+                <div class="bpf-pill">
+                    <span class="bpf-pill-val">20/day</span>
+                    <span class="bpf-pill-lbl">emails sent</span>
+                </div>
+                <span class="bpf-op">×</span>
+                <div class="bpf-pill">
+                    <span class="bpf-pill-val">20 days</span>
+                    <span class="bpf-pill-lbl">consistency</span>
+                </div>
+                <span class="bpf-op">→</span>
+                <div class="bpf-pill">
+                    <span class="bpf-pill-val">400</span>
+                    <span class="bpf-pill-lbl">total outreach</span>
+                </div>
+                <span class="bpf-op">→</span>
+                <div class="bpf-pill">
+                    <span class="bpf-pill-val">40</span>
+                    <span class="bpf-pill-lbl">replies</span>
+                </div>
+                <span class="bpf-op">→</span>
+                <div class="bpf-pill bpf-pill--result">
+                    <span class="bpf-pill-val bpf-pill-val--result">8 Clients</span>
+                    <span class="bpf-pill-lbl">guaranteed</span>
+                </div>
+            </div>
+            <p class="bpf-caption">Simple math. Predictable results.</p>
+
+            <!-- DIVIDER -->
+            <div class="bpf-divider"></div>
+
+            <!-- SECTION 3: HOW IT WORKS — ACRONYM CARDS -->
+            <p class="bpf-method-heading">How This System Actually Works</p>
+            <div class="bpf-method-row">
+
+                <!-- GROW: Find Leads -->
+                <div class="bpf-acr-card">
+                    <div class="bpf-acr-header">
+                        <span class="bpf-acr-name">GROW</span>
+                        <span class="bpf-acr-tag">Find Leads</span>
+                    </div>
+                    <div class="bpf-acr-grid bpf-acr-grid--4">
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter bpf-acr-letter--dim">G</span>
+                            <span class="bpf-acr-word">Generic</span>
+                            <span class="bpf-acr-note">low quality</span>
+                        </div>
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter bpf-acr-letter--dim">R</span>
+                            <span class="bpf-acr-word">Running</span>
+                            <span class="bpf-acr-note">active biz</span>
+                        </div>
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter bpf-acr-letter--dim">O</span>
+                            <span class="bpf-acr-word">Organized</span>
+                            <span class="bpf-acr-note">avoid slow</span>
+                        </div>
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter bpf-acr-letter--hot">W</span>
+                            <span class="bpf-acr-word bpf-acr-word--hot">Working</span>
+                            <span class="bpf-acr-note bpf-acr-note--hot">best leads ★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="bpf-op">→</span>
+
+                <!-- BRIGHT: Qualify Leads -->
+                <div class="bpf-acr-card">
+                    <div class="bpf-acr-header">
+                        <span class="bpf-acr-name">BRIGHT</span>
+                        <span class="bpf-acr-tag">Qualify Leads</span>
+                    </div>
+                    <div class="bpf-acr-grid bpf-acr-grid--6">
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter">B</span>
+                            <span class="bpf-acr-word">Business</span>
+                            <span class="bpf-acr-note">active check</span>
+                        </div>
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter">R</span>
+                            <span class="bpf-acr-word">Reach</span>
+                            <span class="bpf-acr-note">decision maker</span>
+                        </div>
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter">I</span>
+                            <span class="bpf-acr-word">Identify</span>
+                            <span class="bpf-acr-note">problem</span>
+                        </div>
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter">G</span>
+                            <span class="bpf-acr-word">Good</span>
+                            <span class="bpf-acr-note">lead select</span>
+                        </div>
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter">H</span>
+                            <span class="bpf-acr-word">Handle</span>
+                            <span class="bpf-acr-note">right contact</span>
+                        </div>
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter">T</span>
+                            <span class="bpf-acr-word">Timing</span>
+                            <span class="bpf-acr-note">follow-up</span>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="bpf-op">→</span>
+
+                <!-- MACTER: Outreach -->
+                <div class="bpf-acr-card">
+                    <div class="bpf-acr-header">
+                        <span class="bpf-acr-name">MACTER</span>
+                        <span class="bpf-acr-tag">Outreach</span>
+                    </div>
+                    <div class="bpf-acr-grid bpf-acr-grid--6">
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter">M</span>
+                            <span class="bpf-acr-word">Mail</span>
+                            <span class="bpf-acr-note">first touch</span>
+                        </div>
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter">A</span>
+                            <span class="bpf-acr-word">Ask</span>
+                            <span class="bpf-acr-note">qualify</span>
+                        </div>
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter">C</span>
+                            <span class="bpf-acr-word">Chat</span>
+                            <span class="bpf-acr-note">engage</span>
+                        </div>
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter">T</span>
+                            <span class="bpf-acr-word">Talk</span>
+                            <span class="bpf-acr-note">build trust</span>
+                        </div>
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter">E</span>
+                            <span class="bpf-acr-word">Easy</span>
+                            <span class="bpf-acr-note">close deal</span>
+                        </div>
+                        <div class="bpf-acr-col">
+                            <span class="bpf-acr-letter">R</span>
+                            <span class="bpf-acr-word">Read</span>
+                            <span class="bpf-acr-note">follow up</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
+
+        <!-- VALUE POINTS -->
+        <div class="bp-values-grid">
+            <div class="bp-value-item">
+                <i class="fas fa-check-circle bp-check-icon"></i>
+                <span>Built from real freelancing experience, not theory</span>
+            </div>
+            <div class="bp-value-item">
+                <i class="fas fa-check-circle bp-check-icon"></i>
+                <span>Built for direct cold outreach — no platform fees</span>
+            </div>
+            <div class="bp-value-item">
+                <i class="fas fa-check-circle bp-check-icon"></i>
+                <span>Simple enough for anyone to follow from day one</span>
+            </div>
+            <div class="bp-value-item">
+                <i class="fas fa-check-circle bp-check-icon"></i>
+                <span>Psychology-based approach — no spam, no automation</span>
+            </div>
+        </div>
+
+        <!-- PRICING CARD — above who is this for -->
+        <div class="bp-pricing-top" style="flex-direction:column;align-items:center;gap:12px;">
+            <div class="bp-timer-label">
+                <i class="fas fa-fire" style="color:#f87171;"></i>
+                Today only deal — offer expires in:
+            </div>
+            <div class="bp-countdown">
+                <div class="bp-countdown-unit">
+                    <div class="bp-countdown-num" id="bp-hours">06</div>
+                    <div class="bp-countdown-label">HRS</div>
+                </div>
+                <div class="bp-countdown-sep">:</div>
+                <div class="bp-countdown-unit">
+                    <div class="bp-countdown-num" id="bp-mins">44</div>
+                    <div class="bp-countdown-label">MIN</div>
+                </div>
+                <div class="bp-countdown-sep">:</div>
+                <div class="bp-countdown-unit">
+                    <div class="bp-countdown-num bp-countdown-num--green" id="bp-secs">10</div>
+                    <div class="bp-countdown-label">SEC</div>
+                </div>
+            </div>
+            <div class="bp-pricing-center">
+                <div class="bp-price-row">
+                    <span class="bp-old-price">$29.00</span>
+                    <span class="bp-new-price">$7.99</span>
+                    <span class="bp-badge-discount">73% OFF</span>
+                </div>
+                <a href="https://younasphere34.gumroad.com/l/8-ClientsBlueprint" target="_blank" class="bp-cta-btn">
+                    <i class="fas fa-bolt"></i>
+                    Download Now
+                </a>
+                <p class="bp-cta-note">Today only deal — limited time offer</p>
+            </div>
+        </div>
+
+        <!-- WHO IS THIS FOR -->
+        <div class="bp-for-section">
+            <p class="bp-for-label">Who Is This For?</p>
+            <div class="bp-for-list">
+                <span class="bp-for-pill"><span class="bp-for-dot"></span>Freelancers who can't land clients consistently</span>
+                <span class="bp-for-pill"><span class="bp-for-dot"></span>Developers, designers &amp; agencies doing cold outreach</span>
+                <span class="bp-for-pill"><span class="bp-for-dot"></span>Anyone leaving Fiverr / Upwork for direct clients</span>
+                <span class="bp-for-pill"><span class="bp-for-dot"></span>Beginners starting their first freelance hustle</span>
+                <span class="bp-for-pill"><span class="bp-for-dot"></span>Solopreneurs building a client pipeline from scratch</span>
+            </div>
+        </div>
+
+        <!-- REVIEWS — below pricing with heading -->
+        <div class="bp-reviews-bottom">
+            <p class="bp-reviews-heading">
+                <i class="fas fa-star"></i> Real Reviews from Freelancers
+            </p>
+            <div class="bp-reviews-grid">
+
+                <!-- Left stack (1–7) -->
+                <div class="bp-rev-stack">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/1r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/2r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/3r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/4r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/5r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/6r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/7r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                </div>
+
+                <!-- Middle stack (8–14) -->
+                <div class="bp-rev-stack">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/8r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/9r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/10r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/11r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/12r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/13r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/14r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                </div>
+
+                <!-- Right stack (15–21) -->
+                <div class="bp-rev-stack">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/15r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/16r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/17r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/18r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/19r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/20r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                    <img src="{{ pub_asset('public/assets/images/bookreviews/21r.png') }}" alt="Review screenshot" class="bp-rev-img">
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </section>
+
+<script>
+(function () {
+    function updateCountdown() {
+        var now = new Date();
+        var midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+        var diff = Math.max(0, Math.floor((midnight - now) / 1000));
+        var h = Math.floor(diff / 3600);
+        var m = Math.floor((diff % 3600) / 60);
+        var s = diff % 60;
+        var hStr = String(h).padStart(2, '0');
+        var mStr = String(m).padStart(2, '0');
+        var sStr = String(s).padStart(2, '0');
+        document.getElementById('bp-hours').textContent  = hStr;
+        document.getElementById('bp-mins').textContent   = mStr;
+        document.getElementById('bp-secs').textContent   = sStr;
+        document.getElementById('bp-hours2').textContent = hStr;
+        document.getElementById('bp-mins2').textContent  = mStr;
+        document.getElementById('bp-secs2').textContent  = sStr;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+})();
+</script>
 
 
     <!-- ░░░ SOCIAL FOLLOW ░░░ -->
-    <section class="py-12 bg-black border-t section-line">
+    <section class="py-12 border-t section-line" style="background:#B1E78E;">
         <div class="max-w-2xl mx-auto px-6 text-center space-y-6">
             <div>
-                <h2 class="text-2xl font-black text-white mb-2">Follow My Journey</h2>
-                <p class="text-gray-500 text-sm">I share tips on PHP, AI tools, freelancing &amp; client hunting — every week</p>
+                <h2 class="text-2xl font-black mb-2" style="color:#0d0d0d;">Follow My Journey</h2>
+                <p class="text-sm" style="color:#1c1c1c;">I share tips on PHP, AI tools, freelancing &amp; client hunting — every week</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <a href="https://www.youtube.com/@YounasDev" target="_blank"
-                   class="flex flex-col items-center gap-2 p-4 rounded-xl border border-gray-800 hover:border-red-500 transition-all duration-300 hover:-translate-y-1 group">
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform" style="background:rgba(255,0,0,0.1);">
-                        <i class="fab fa-youtube text-xl text-red-500"></i>
+                   class="flex flex-col items-center gap-2 p-4 rounded-xl transition-all duration-300 hover:-translate-y-1"
+                   style="background:rgba(0,0,0,0.1);border:1px solid rgba(0,0,0,0.15);">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:rgba(255,255,255,0.5);">
+                        <i class="fab fa-youtube text-xl text-red-600"></i>
                     </div>
-                    <div class="text-white font-semibold text-xs">YouTube</div>
-                    <div class="text-gray-600 text-xs">Subscribe</div>
+                    <div class="font-semibold text-xs" style="color:#0d0d0d;">YouTube</div>
+                    <div class="text-xs" style="color:#1c1c1c;">Subscribe</div>
                 </a>
                 <a href="https://www.facebook.com/YounasDev" target="_blank"
-                   class="flex flex-col items-center gap-2 p-4 rounded-xl border border-gray-800 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1 group">
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform" style="background:rgba(59,130,246,0.1);">
-                        <i class="fab fa-facebook text-xl text-blue-500"></i>
+                   class="flex flex-col items-center gap-2 p-4 rounded-xl transition-all duration-300 hover:-translate-y-1"
+                   style="background:rgba(0,0,0,0.1);border:1px solid rgba(0,0,0,0.15);">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:rgba(255,255,255,0.5);">
+                        <i class="fab fa-facebook text-xl text-blue-600"></i>
                     </div>
-                    <div class="text-white font-semibold text-xs">Facebook</div>
-                    <div class="text-gray-600 text-xs">Follow</div>
+                    <div class="font-semibold text-xs" style="color:#0d0d0d;">Facebook</div>
+                    <div class="text-xs" style="color:#1c1c1c;">Follow</div>
                 </a>
                 <a href="https://www.linkedin.com/in/younasdev/" target="_blank"
-                   class="flex flex-col items-center gap-2 p-4 rounded-xl border border-gray-800 hover:border-blue-400 transition-all duration-300 hover:-translate-y-1 group">
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform" style="background:rgba(10,102,194,0.1);">
-                        <i class="fab fa-linkedin text-xl text-blue-400"></i>
+                   class="flex flex-col items-center gap-2 p-4 rounded-xl transition-all duration-300 hover:-translate-y-1"
+                   style="background:rgba(0,0,0,0.1);border:1px solid rgba(0,0,0,0.15);">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:rgba(255,255,255,0.5);">
+                        <i class="fab fa-linkedin text-xl text-blue-700"></i>
                     </div>
-                    <div class="text-white font-semibold text-xs">LinkedIn</div>
-                    <div class="text-gray-600 text-xs">Connect</div>
+                    <div class="font-semibold text-xs" style="color:#0d0d0d;">LinkedIn</div>
+                    <div class="text-xs" style="color:#1c1c1c;">Connect</div>
                 </a>
                 <a href="https://x.com/YounasDev" target="_blank"
-                   class="flex flex-col items-center gap-2 p-4 rounded-xl border border-gray-800 hover:border-white transition-all duration-300 hover:-translate-y-1 group">
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform" style="background:rgba(255,255,255,0.06);">
-                        <i class="fab fa-x-twitter text-xl text-white"></i>
+                   class="flex flex-col items-center gap-2 p-4 rounded-xl transition-all duration-300 hover:-translate-y-1"
+                   style="background:rgba(0,0,0,0.1);border:1px solid rgba(0,0,0,0.15);">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:rgba(255,255,255,0.5);">
+                        <i class="fab fa-x-twitter text-xl" style="color:#0d0d0d;"></i>
                     </div>
-                    <div class="text-white font-semibold text-xs">X (Twitter)</div>
-                    <div class="text-gray-600 text-xs">Follow</div>
+                    <div class="font-semibold text-xs" style="color:#0d0d0d;">X (Twitter)</div>
+                    <div class="text-xs" style="color:#1c1c1c;">Follow</div>
                 </a>
             </div>
         </div>

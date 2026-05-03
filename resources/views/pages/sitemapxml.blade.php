@@ -12,11 +12,6 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>{{ url('/services') }}</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>{{ url('/projects') }}</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

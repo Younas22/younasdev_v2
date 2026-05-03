@@ -138,12 +138,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ url('/services') }}">
-                                <span class="link-icon">⚙️</span>
-                                <span>Services</span>
-                            </a>
-                        </li>
-                        <li>
                             <a href="{{ url('/projects') }}">
                                 <span class="link-icon">💼</span>
                                 <span>Projects</span>

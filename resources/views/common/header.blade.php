@@ -829,7 +829,7 @@
             .bp-pricing-center { width: 100%; }
             .bp-reviews-grid { gap: 6px; flex-direction: column; }
             .bp-rev-stack { flex-direction: row; overflow-x: auto; padding-bottom: 4px; width: 100%; flex: none; }
-            .bp-rev-img { width: 90px; flex-shrink: 0; }
+            .bp-rev-img { width: 90px; flex-shrink: 0; transform: none !important; opacity: 1 !important; }
         }
 
         /* ═══ BOOK REVIEWS MARQUEE ═══ */
@@ -925,8 +925,11 @@
 
             /* ── REVIEWS ── */
             .bp-reviews-grid { flex-direction: column; }
-            .bp-rev-stack { flex-direction: row; overflow-x: auto; padding-bottom: 6px; width: 100%; flex: none; }
-            .bp-rev-img { width: 110px; flex-shrink: 0; }
+            .bp-rev-stack { flex-direction: row; overflow-x: auto; padding-bottom: 6px; width: 100%; flex: none; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+            .bp-rev-stack::-webkit-scrollbar { height: 3px; }
+            .bp-rev-stack::-webkit-scrollbar-track { background: #111; }
+            .bp-rev-stack::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+            .bp-rev-img { width: 110px; flex-shrink: 0; transform: none !important; opacity: 1 !important; scroll-snap-align: start; }
 
             /* ── WHO IS THIS FOR pills ── */
             .bp-for-pill { font-size: .72rem; }
@@ -967,7 +970,7 @@
             .bp-cta-btn { font-size: .88rem; padding: 13px 18px; }
 
             /* ── REVIEWS ── */
-            .bp-rev-img { width: 85px; }
+            .bp-rev-img { width: 85px; transform: none !important; opacity: 1 !important; }
 
             /* ── STAT CARDS (CustomerNearMe section) ── */
             .grid.grid-cols-3 { grid-template-columns: repeat(3, 1fr) !important; }

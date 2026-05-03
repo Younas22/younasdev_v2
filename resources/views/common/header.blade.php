@@ -13,7 +13,7 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <link rel="canonical" href="{{ url()->current() }}">
 
-    <link rel="icon" type="image/png" href="{{ pub_asset('public/assets/images/personal/logo.png') }}">
+    <link rel="icon" type="image/png" sizes="64x64" href="{{ pub_asset('public/favicon.png') }}?v=3">
     <link rel="apple-touch-icon" href="{{ pub_asset('public/assets/images/personal/logo.png') }}">
 
     <script src="https://cdn.tailwindcss.com"></script>

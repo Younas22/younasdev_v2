@@ -5,7 +5,6 @@
 @section('content')
 
 {{-- Stock Software Linked App Card --}}
-@if(!empty($stockApp) && $stockApp->isNotEmpty())
 <div class="row g-4 mb-4">
     <div class="col-12">
         <div class="card border-0 shadow-sm">
@@ -74,7 +73,6 @@
         </div>
     </div>
 </div>
-@endif
 
 <script>
 function togglePass(plain) {

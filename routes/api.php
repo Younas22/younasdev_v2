@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\AmadeusEnterpriseController;
+use App\Http\Controllers\API\StockAppController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,3 +15,6 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+// Stock-software registration (no auth — server-to-server)
+Route::post('/stock-app/register', [StockAppController::class, 'register']);

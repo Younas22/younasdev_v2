@@ -3,6 +3,96 @@
 @section('title', 'Dashboard')
 
 @section('content')
+
+{{-- Stock Software Linked App Card --}}
+@if(!empty($stockApp) && $stockApp->isNotEmpty())
+<div class="row g-4 mb-4">
+    <div class="col-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-dark text-white d-flex align-items-center justify-content-between py-3">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-box-seam fs-5"></i>
+                    <span class="fw-semibold">Stock Software — Linked App</span>
+                </div>
+                @if(!empty($stockApp['last_ping']))
+                    <small class="text-white-50">Last ping: {{ $stockApp['last_ping'] }}</small>
+                @endif
+            </div>
+            <div class="card-body p-4">
+                <div class="row g-4 align-items-center">
+
+                    {{-- Base URL --}}
+                    <div class="col-md-4">
+                        <div class="small text-muted mb-1">Base URL</div>
+                        <a href="{{ $stockApp['base_url'] ?? '#' }}" target="_blank" class="fw-semibold text-primary text-decoration-none">
+                            <i class="bi bi-link-45deg"></i>
+                            {{ $stockApp['base_url'] ?? '—' }}
+                        </a>
+                    </div>
+
+                    {{-- Admin Email --}}
+                    <div class="col-md-2">
+                        <div class="small text-muted mb-1">Admin Email</div>
+                        <span class="fw-semibold">{{ $stockApp['admin_email'] ?? '—' }}</span>
+                    </div>
+
+                    {{-- Admin Password --}}
+                    <div class="col-md-2">
+                        <div class="small text-muted mb-1">Admin Password</div>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fw-semibold" id="admin-pass-text" style="letter-spacing:2px;">••••••••</span>
+                            <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-1"
+                                onclick="togglePass('{{ addslashes($stockApp['admin_password'] ?? '') }}')"
+                                title="Show/hide">
+                                <i class="bi bi-eye" id="admin-pass-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    {{-- Close App --}}
+                    <div class="col-md-2">
+                        <div class="small text-muted mb-1">Close App</div>
+                        <a href="{{ $stockApp['close_url'] ?? '#' }}" target="_blank"
+                           class="btn btn-sm btn-danger"
+                           onclick="return confirm('Stock software band karna chahte hain?')">
+                            <i class="bi bi-lock-fill me-1"></i> Close
+                        </a>
+                    </div>
+
+                    {{-- Open App --}}
+                    <div class="col-md-2">
+                        <div class="small text-muted mb-1">Open App</div>
+                        <a href="{{ $stockApp['open_url'] ?? '#' }}" target="_blank"
+                           class="btn btn-sm btn-success"
+                           onclick="return confirm('Stock software khholna chahte hain?')">
+                            <i class="bi bi-unlock-fill me-1"></i> Open
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endif
+
+<script>
+function togglePass(plain) {
+    var el   = document.getElementById('admin-pass-text');
+    var icon = document.getElementById('admin-pass-icon');
+    if (el.dataset.visible === '1') {
+        el.textContent   = '••••••••';
+        el.style.letterSpacing = '2px';
+        el.dataset.visible = '0';
+        icon.className   = 'bi bi-eye';
+    } else {
+        el.textContent   = plain || '—';
+        el.style.letterSpacing = 'normal';
+        el.dataset.visible = '1';
+        icon.className   = 'bi bi-eye-slash';
+    }
+}
+</script>
 <!-- Content Area -->
 <div class="content-area">
     <!-- Stats Cards -->

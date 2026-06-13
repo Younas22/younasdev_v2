@@ -4,90 +4,98 @@
 
 @section('content')
 
-{{-- Stock Software Linked App Card --}}
+{{-- Stock Software Linked Apps --}}
 <div class="row g-4 mb-4">
     <div class="col-12">
         <div class="card border-0 shadow-sm">
-            <div class="card-header bg-dark text-white d-flex align-items-center justify-content-between py-3">
+            <div class="card-header bg-dark text-white py-3">
                 <div class="d-flex align-items-center gap-2">
                     <i class="bi bi-box-seam fs-5"></i>
-                    <span class="fw-semibold">Stock Software — Linked App</span>
-                </div>
-                @if(!empty($stockApp['last_ping']))
-                    <small class="text-white-50">Last ping: {{ $stockApp['last_ping'] }}</small>
-                @endif
-            </div>
-            <div class="card-body p-4">
-                <div class="row g-4 align-items-center">
-
-                    {{-- Base URL --}}
-                    <div class="col-md-4">
-                        <div class="small text-muted mb-1">Base URL</div>
-                        <a href="{{ $stockApp['base_url'] ?? '#' }}" target="_blank" class="fw-semibold text-primary text-decoration-none">
-                            <i class="bi bi-link-45deg"></i>
-                            {{ $stockApp['base_url'] ?? '—' }}
-                        </a>
-                    </div>
-
-                    {{-- Admin Email --}}
-                    <div class="col-md-2">
-                        <div class="small text-muted mb-1">Admin Email</div>
-                        <span class="fw-semibold">{{ $stockApp['admin_email'] ?? '—' }}</span>
-                    </div>
-
-                    {{-- Admin Password --}}
-                    <div class="col-md-2">
-                        <div class="small text-muted mb-1">Admin Password</div>
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="fw-semibold" id="admin-pass-text" style="letter-spacing:2px;">••••••••</span>
-                            <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-1"
-                                onclick="togglePass('{{ addslashes($stockApp['admin_password'] ?? '') }}')"
-                                title="Show/hide">
-                                <i class="bi bi-eye" id="admin-pass-icon"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    {{-- Close App --}}
-                    <div class="col-md-2">
-                        <div class="small text-muted mb-1">Close App</div>
-                        <a href="{{ $stockApp['close_url'] ?? '#' }}" target="_blank"
-                           class="btn btn-sm btn-danger"
-                           onclick="return confirm('Stock software band karna chahte hain?')">
-                            <i class="bi bi-lock-fill me-1"></i> Close
-                        </a>
-                    </div>
-
-                    {{-- Open App --}}
-                    <div class="col-md-2">
-                        <div class="small text-muted mb-1">Open App</div>
-                        <a href="{{ $stockApp['open_url'] ?? '#' }}" target="_blank"
-                           class="btn btn-sm btn-success"
-                           onclick="return confirm('Stock software khholna chahte hain?')">
-                            <i class="bi bi-unlock-fill me-1"></i> Open
-                        </a>
-                    </div>
-
+                    <span class="fw-semibold">Stock Software — Linked Apps</span>
+                    <span class="badge bg-secondary ms-1">{{ $stockApps->count() }}</span>
                 </div>
             </div>
+
+            @if($stockApps->isEmpty())
+                <div class="card-body text-muted text-center py-4">
+                    Koi linked app nahi mili. Stock software visit karein taake registration ho sake.
+                </div>
+            @else
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0 align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>#</th>
+                                <th>Base URL</th>
+                                <th>Admin Email</th>
+                                <th>Admin Password</th>
+                                <th>Last Ping</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($stockApps as $i => $app)
+                            <tr>
+                                <td class="text-muted">{{ $i + 1 }}</td>
+                                <td>
+                                    <a href="{{ $app->base_url }}" target="_blank" class="text-primary text-decoration-none fw-semibold">
+                                        <i class="bi bi-link-45deg"></i> {{ $app->base_url }}
+                                    </a>
+                                </td>
+                                <td>{{ $app->admin_email ?: '—' }}</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="pass-text" data-id="{{ $app->id }}" style="letter-spacing:2px;">••••••••</span>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-1"
+                                            onclick="togglePass({{ $app->id }}, '{{ addslashes($app->admin_password ?? '') }}')"
+                                            title="Show/hide">
+                                            <i class="bi bi-eye" id="pass-icon-{{ $app->id }}"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    @if($app->last_ping)
+                                        <small class="text-muted">{{ $app->last_ping->diffForHumans() }}</small>
+                                    @else
+                                        <small class="text-muted">—</small>
+                                    @endif
+                                </td>
+                                <td>
+                                    <a href="{{ $app->close_url }}" target="_blank"
+                                       class="btn btn-sm btn-danger me-1"
+                                       onclick="return confirm('Stock software band karna chahte hain?')">
+                                        <i class="bi bi-lock-fill"></i> Close
+                                    </a>
+                                    <a href="{{ $app->open_url }}" target="_blank"
+                                       class="btn btn-sm btn-success"
+                                       onclick="return confirm('Stock software kholna chahte hain?')">
+                                        <i class="bi bi-unlock-fill"></i> Open
+                                    </a>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            @endif
         </div>
     </div>
 </div>
 
 <script>
-function togglePass(plain) {
-    var el   = document.getElementById('admin-pass-text');
-    var icon = document.getElementById('admin-pass-icon');
+function togglePass(id, plain) {
+    var el   = document.querySelector('.pass-text[data-id="' + id + '"]');
+    var icon = document.getElementById('pass-icon-' + id);
     if (el.dataset.visible === '1') {
-        el.textContent   = '••••••••';
+        el.textContent         = '••••••••';
         el.style.letterSpacing = '2px';
-        el.dataset.visible = '0';
-        icon.className   = 'bi bi-eye';
+        el.dataset.visible     = '0';
+        icon.className         = 'bi bi-eye';
     } else {
-        el.textContent   = plain || '—';
+        el.textContent         = plain || '—';
         el.style.letterSpacing = 'normal';
-        el.dataset.visible = '1';
-        icon.className   = 'bi bi-eye-slash';
+        el.dataset.visible     = '1';
+        icon.className         = 'bi bi-eye-slash';
     }
 }
 </script>

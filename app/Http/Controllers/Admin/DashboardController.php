@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Setting;
+use App\Models\StockApp;
 use App\Models\User;
 use App\Models\Booking;
 use Illuminate\Http\Request;
@@ -40,8 +40,8 @@ class DashboardController extends Controller
                                ->latest()
                                ->take(5)
                                ->get();
-        $stockApp = Setting::getByGroup('stock_app');
+        $stockApps = StockApp::latest()->get();
 
-        return view('admin.dashboard.index', compact('stats', 'recent_bookings', 'recent_customers', 'stockApp'));
+        return view('admin.dashboard.index', compact('stats', 'recent_bookings', 'recent_customers', 'stockApps'));
     }
 }
